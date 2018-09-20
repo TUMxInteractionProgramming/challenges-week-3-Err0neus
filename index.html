@@ -10,6 +10,9 @@
     <!-- #4 #sweat out the styles by creating an #external css -->
     <link rel="stylesheet" href="css/style.css" />
 
+
+
+
     
 </head>
 <body>
@@ -23,7 +26,9 @@
 
     <!-- #3 #channels #list is much better, than headlines or paragraphs... -->
     <ul>
-        <li>#Yummy
+
+        <!-- #6 adding onclick function-->
+        <li onclick="switchChannel('#Yummy');">#Yummy
             <!-- #3 #channels #favorite this is not starred -->
             <!-- #5 adding chevrons in an inline element with a .channel-meta class-->
             <span class="channel-meta">
@@ -33,7 +38,8 @@
         </li>
 
         <!-- #4 #channel is #highlighted -->
-        <li class="selected">
+        <!-- #6 adding onclick function-->
+        <li class="selected" onclick="switchChannel('#SevenContinents');">
             #SevenContinents
             <!-- #3 #channels #favorite this is starred -->
             <!-- #5 adding chevrons in an inline element with a .channel-meta class-->
@@ -42,7 +48,10 @@
             <img src="http://ip.lfe.mw.tum.de/sections/chevron-right.png" alt="chevron-right">
             </span>    
         </li>
-        <li>#KillerApp
+
+        <!-- #6 adding onclick function-->
+        <li onclick="switchChannel('#KillerApp');"> 
+            #KillerApp
             <!-- #3 #channels #favorite this is not starred -->
             <!-- #5 adding chevrons in an inline element with a .channel-meta class-->
             <span class="channel-meta">
@@ -50,7 +59,10 @@
             <img src="http://ip.lfe.mw.tum.de/sections/chevron-right.png" alt="chevron-right">
             </span> 
         </li>
-        <li>#FirstPersonOnMars
+
+        <!-- #6 adding onclick function-->
+        <li onclick="switchChannel('#FirstPersonOnMars');">
+            #FirstPersonOnMars
             <!-- #3 #channels #favorite this is starred -->
             <!-- #5 adding chevrons in an inline element with a .channel-meta class-->
             <span class="channel-meta">
@@ -58,7 +70,10 @@
             <img src="http://ip.lfe.mw.tum.de/sections/chevron-right.png" alt="chevron-right">
             </span>         
         </li>
-        <li>#Octoberfest
+
+        <!-- #6 adding onclick function-->
+        <li onclick="switchChannel('#Octoberfest');">
+            #Octoberfest
             <!-- #3 #channels #favorite this is not starred -->
             <!-- #5 adding chevrons in an inline element with a .channel-meta class-->
             <span class="channel-meta">
@@ -94,11 +109,12 @@
 <!-- #4 #one #page -->
 <div id="chat">
     <h1>
-        #SevenContinents
+        <!-- #6 new selectors for chat top bar dynamic elements-->
+        <span id="head-channel" onclick="unfillCurrentChannelStar()">#SevenContinents</span>
         <small>by
-            <strong>cheeses.yard.applies</strong>
+            <strong id="head-w3w">cheeses.yard.applies</strong>
         </small>
-        <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star">
+        <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star" id="star-current-channel" onclick="fillCurrentChannelStar()">
     </h1>
     
     <!-- #5 adding a div to select chat area-->
@@ -215,7 +231,7 @@
     <!-- #5 add some smileys-->
     <div id="chat-bar">
         
-        <button id="emojis-button">
+        <button id="emojis-button" onclick="document.querySelector('#emojis').style='display:none;'">
             <img src="http://ip.lfe.mw.tum.de/sections/smile-o.png" alt="emojis">
         </button>
         
@@ -225,5 +241,14 @@
 
 </div>
 
+    <!-- #6 linking jQuery from CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- #6 calling jQuery from local directory-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- #6 embedding js file-->
+    <script src="js/script.js"></script>
+    
 </body>
 </html>

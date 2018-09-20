@@ -48,7 +48,7 @@ h1 {
     bottom: 0px;
 }
 
-h1 span{
+#channels h1 span{
     position: absolute;
     left: 60px;
 }
@@ -129,6 +129,11 @@ li img {
 
 }
 
+/* #6 resetting color of the tob chat bar w3w location link */
+#head-w3w {
+    color: white;
+}
+
 /* #4 add styles to #tab-bar #buttons */
 /* #5 add styles to #chat-bar #buttons */
 #tab-bar button, #chat-bar button {
@@ -141,6 +146,8 @@ li img {
     height: 72px;
     padding: 16px;
 }
+
+
 
 /* #4 #tab-bar buttons do have a #line-break and images are centered due to the left&right auto margin */
 #tab-bar button img {
@@ -180,7 +187,7 @@ li img {
 
 #chat h1 img {
     position: absolute;
-    right: 10px;
+    right: 16px;
     padding: 20px 0px;
 
 }
@@ -268,4 +275,5 @@ li img {
     left: 20px;
 
 }
+
 
