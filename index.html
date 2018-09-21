@@ -88,21 +88,23 @@
     <!-- #4 #sweat #tab-bar -->
     <div id="tab-bar">
         <!-- #4 #tab-bar selected channel should be #highlighted -->
-        <button class="selected">
+        <button id="tab-bar-new" class="selected" onclick="selectTab('tab-bar-new')">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="Bulb">
             New
         </button>
-        <button>
+        <button id="tab-bar-trending" onclick="selectTab('tab-bar-trending')">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/fire.png" alt="Hot">
             Trending
         </button>
-        <button>
+
+        <button id="tab-bar-favorites" onclick="selectTab('tab-bar-favorites')">
             <!-- #3 #tab-bar #images -->
             <img src="http://ip.lfe.mw.tum.de/sections/star.png" alt="Star">
-            Favorites
+            Favorites 
         </button>
+
     </div>
 </div>
 
@@ -110,7 +112,7 @@
 <div id="chat">
     <h1>
         <!-- #6 new selectors for chat top bar dynamic elements-->
-        <span id="head-channel" onclick="unfillCurrentChannelStar()">#SevenContinents</span>
+        <span id="head-channel">#SevenContinents</span>
         <small>by
             <strong id="head-w3w">cheeses.yard.applies</strong>
         </small>
@@ -231,7 +233,7 @@
     <!-- #5 add some smileys-->
     <div id="chat-bar">
         
-        <button id="emojis-button" onclick="document.querySelector('#emojis').style='display:none;'">
+        <button id="emojis-button" onclick="toggleEmojiBox()">
             <img src="http://ip.lfe.mw.tum.de/sections/smile-o.png" alt="emojis">
         </button>
         

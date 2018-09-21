@@ -50,7 +50,7 @@ h1 {
 
 #channels h1 span{
     position: absolute;
-    left: 60px;
+    left: 70px;
 }
 
 
@@ -184,6 +184,9 @@ li img {
 
 }
 
+#chat h1 {
+    padding-left: 2.5%;
+}
 
 #chat h1 img {
     position: absolute;
@@ -269,6 +272,7 @@ li img {
     text-align: left;
     overflow: auto;
     padding: 16px;
+    display: none;
 
     position: absolute;
     bottom: 75%;
